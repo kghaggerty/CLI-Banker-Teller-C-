@@ -11,7 +11,7 @@ namespace BankTeller
         public DatabaseInterface()
         {
             // Replace {you} with the correct value
-            _connectionString = $"Data Source=/Users/stevebrownlee/dev/github/stevebrownlee/BankTeller/bankteller.db";
+            _connectionString = $"Data Source=/Users/KevinHaggerty/workspace/csharp/exercises/BankTeller/csharp-bankteller-boilerplate/bankteller.db";
             _connection = new SqliteConnection(_connectionString);
         }
 
@@ -31,8 +31,8 @@ namespace BankTeller
                 dbcmd.Dispose ();
             }
         }
-
-        public void Delete(string command)
+        //Changed from delete to update to fit this exercise
+        public void Update(string command)
         {
             using (_connection)
             {
